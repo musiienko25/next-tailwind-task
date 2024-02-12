@@ -1,4 +1,3 @@
-// components/ItemList.tsx
 import React from "react";
 
 interface Item {
