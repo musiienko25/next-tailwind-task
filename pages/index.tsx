@@ -1,13 +1,18 @@
+import React from "react";
+import ItemList from "../components/ItemList";
 import Link from "next/link";
-import Layout from "../components/Layout";
+import data from "../data.json";
 
-const IndexPage = () => (
-  <Layout title="Home | Next.js + TypeScript Example">
-    <h1>Hello Next.js 👋</h1>
-    <p>
-      <Link href="/about">About</Link>
-    </p>
-  </Layout>
-);
+const Home: React.FC = () => {
+  return (
+    <div>
+      <h1 className="text-4xl font-bold mb-4 text-center mt-5">Home</h1>
+      <ItemList items={data} />
+      <nav className="text-blue-500 hover:text-blue-700 text-center">
+        <Link href="/about">About</Link>
+      </nav>
+    </div>
+  );
+};
 
-export default IndexPage;
+export default Home;

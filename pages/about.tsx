@@ -1,14 +1,22 @@
+// pages/about.tsx
+import React from "react";
 import Link from "next/link";
-import Layout from "../components/Layout";
 
-const AboutPage = () => (
-  <Layout title="About | Next.js + TypeScript Example">
-    <h1>About</h1>
-    <p>This is the about page</p>
-    <p>
-      <Link href="/">Go home</Link>
-    </p>
-  </Layout>
-);
+const About: React.FC = () => {
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-4xl font-bold mb-6">About Us</h1>
+      <p className="text-lg">
+        Welcome to our store! We are committed to providing quality products and
+        excellent customer service.
+      </p>
+      <div className="mt-4">
+        <Link className="text-blue-500 hover:text-blue-700" href="/" passHref>
+          Go back home
+        </Link>
+      </div>
+    </div>
+  );
+};
 
-export default AboutPage;
+export default About;
